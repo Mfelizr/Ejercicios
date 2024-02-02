@@ -8,6 +8,9 @@ const inputTitle = document.querySelector("#title")
 const textDescription = document.querySelector("#description")
 console.log("Nueva tarea => ", inputTitle.value)
 
+
+document.addEventListener("DOMContentLoaded", completedTask);
+
 form.addEventListener('submit', (e) => {
     // En el submit: Evalua que el campo title tenga algun valor
     e.preventDefault()    
@@ -36,22 +39,32 @@ form.addEventListener('submit', (e) => {
     newListItem.appendChild(newBtnComplete)
 
     //Eliminar tarea de la lista
-    newBtnComplete.onclick = ()=>{
-        completedTask()
-    }
+    newBtnComplete.classList.add('btnComplete')
+    newBtnComplete.addEventListener("click", completedTask)
+        
+    /* newBtnComplete.onclick = ()=>{        
+       completedTask()
+    } */
 
     //Limpiar
     inputTitle.value = ""
     textDescription.value = ""
-
-});
-
-function completedTask() {    
-    document.querySelector('li').remove()    
-}
+})
 
 completedAll.addEventListener('click', (e) => {
-    const ListItems = document.querySelectorAll("li")
-    ListItems.forEach( (item) => item.remove())
+    if (window.confirm("Quieres marcar todas las tareas como completadas?")) {
+        const listItems = document.querySelectorAll("li")
+        listItems.forEach( (item) => item.remove())
+    }
 });
+
+function completedTask() {
+    const listItems = document.querySelectorAll ("li")
+    for (let i = 0; i<listItems.length; i++) {
+        listItems[i].querySelector(".btnComplete").addEventListener("click", (e) => {                
+            listItems[i].remove()
+        })
+    }  
+}
+
 

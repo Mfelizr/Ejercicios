@@ -33,17 +33,28 @@ button {
     padding: 10px;
     margin-left: 10px;    
 }
+h3 {
+    background-color:#5b718d; /*#306691;*/
+    color: white;    
+    margin: -5px;
+    width:auto;
+    padding: 8px;    
+}
 
 li {
     margin-bottom: 15px;
+    color: #5b718d;     
 }
 .content-task {
     border-radius: 5px;
+    box-shadow: 4px 4px 4px lightslategray;
     padding: 5px;
-    margin: 10px;    
+    margin: 20px 10px;    
     max-width: 95%;    
-    background-color: #fae4c4; /* #9ec3e8*/
+    background-color: white /*#fae4c4; #9ec3e8*/
 }
 span{
     padding: 5px;
+    max-width: 90%;
+    text-wrap: wrap;
 }
