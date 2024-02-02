@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Cockteles</title>
+</head>
+<body>
+    <h1>Los 20 Cockteles mas recientes</h1>
+    <div id="contentList" style="display: flex; align-content: space-evenly; gap: 10px;">
+        <div style="border: blue solid 1px; padding: 10px; width: 25em;">
+            <h2>Lista de Cockteles</h2>
+            <ul id="listCocktails">                
+            </ul>
+        </div>
+        <div id="contentInfo" style="border: blue solid 1px; padding: 10px; width: auto;">
+            <h2>Información del Cocktel</h2>
+            <!-- //Al hacer click en el nombre de un cocktail, se deberá mostrar:El nombre del cocktail. La imagen del cocktail. Los ingredientes del cocktail.
+            //Las instrucciones para preparar el cocktail. El tipo de vaso que se utiliza para servir el cocktail. El tipo de bebida alcohólica que contiene el cocktail. -->
+            <img id="id-image" src="" alt="Cocktail Image" width="25%" height="25%">            
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <label for="id-name">Nombre: </label>
+                <h3 id="id-name"></h3>
+                <!-- <input id="id-name" type="text" name="id-name" value="" readonly>                          -->
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px; margin-bottom: 5px">
+                <label for="id-ingredients">Ingredientes : </label>
+                <textarea name="" id="id-ingredients" cols="50" rows="3" readonly></textarea>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px; margin-bottom: 5px;">
+                <label for="id-instrucciones">Instrucciones: </label>
+                <textarea name="" id="id-instrucciones" cols="50" rows="5" readonly></textarea>
+            </div>
+            <div>
+                <label for="id-tipovaso">Tipo de Vaso: </label>
+                <input id="id-tipovaso" type="text" name="id-tipovaso" value="" readonly style="margin-bottom: 5px;">                
+                <br>
+                <label for="id-tipobebida">Tipo Bebida Alcoholica: </label>
+                <input id="id-tipobebida" type="text" name="id-tipobebida" value="" readonly>
+            </div>            
+        </div>
+    </div>
+</body>
+
+<script src="./constants/cocktails.js"></script>
+<script src="./info.js"></script>
+
+</html>

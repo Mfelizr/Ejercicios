@@ -1,0 +1,41 @@
+<!-- Crear una gráfica de barras que muestre las estadísticas de un pokemon. Las estadísticas a mostrar son: HP, Attack, Defense, Sp. Atk, Sp. Def, Speed. Para ello tendremos que utilizar la librería Chart.js y los datos que nos proporciona la API de PokeAPI. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charts Pokemon</title>
+</head>
+
+<body>
+  <h1>Consulta tu Pokemon</h1>
+
+  <div>
+    <label for="id-pokemon">Id de tu Pokemon: </label>
+    <input id="id-pokemon" type="number" name="id-pokemon" value="1">
+    <button id="click">Buscar</button>
+    <button id="click-random">Busqueda aleatoria</button>
+  </div>
+  
+  <div style="display: flex; align-items: center; gap: 5px;">
+    <label for="pokemon-name">Nombre:</label>
+    <h3 id="pokemon-name"></h3>    
+  </div>  
+  
+  <div>
+    <img id="pokemon-image" src="" alt="Pokemon Image" width="15%" height="15%">
+  </div>
+  
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"
+  integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
